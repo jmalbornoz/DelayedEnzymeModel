@@ -1,0 +1,74 @@
+#-------------------------------------------------------------------------------
+#set terminal postscript eps landscape enhanced "Arial" color 20
+set terminal postscript eps enhanced "Arial" 14
+set encoding iso_8859_1
+
+set output "fig1.eps"
+
+set size 1.0, 1.0
+set origin 0.0, 0.0
+set multiplot
+
+set style line 1 lt 1 lw 4
+set style line 2 lt 2 lw 4 
+set style line 3 lt 1 lw 2 
+set style line 4 lt 4 lw 4 
+set style line 5 lt 5 lw 4 
+set style line 6 lt 6 lw 4 
+set style line 6 lt 7 lw 4 
+set style line 7 lt 8 lw 4 
+set style line 8 lt 9 lw 4 
+set style line 9 lt 10 lw 4 
+
+# FIGURA INFERIOR
+
+set origin 0.2,0.012
+set size square 1.,0.5
+set xlabel "t/{\Symbol t}" 0,-1
+set ylabel "Concentration, {\Symbol m}M" 0,16
+set xrange [0:20]
+set yrange [0:119]
+set key spacing 1.1
+#unset xtics
+#set grid
+set xtics 5
+#set key 1.2,0.6
+#set key spacing 1.25
+set nokey
+#set mytics 1
+#set ytics 0.25
+# 0,-1
+
+plot [0:15][0:120] "delay_b.dat" u 2:3 w l ls 1 title "DDE","noretard_b.dat" u 2:3 w l ls 3 title "ODE","delay_b.dat" u 2:18 w l ls 1 title "[A] + {/Symbol a}_{2}"
+
+
+# FIGURA SUPERIOR
+
+#unset label 1
+#unset label 2
+#unset label 3
+#unset label 4
+set origin 0.228,0.465
+set size square 1.,0.475
+#set ylabel "Concentration, {/Symbol m}M"
+unset xtics
+unset xlabel
+unset ylabel
+#set ylabel "Fraction of total enzyme" 0,-25
+#set xtics ("" 0, "" 5, "" 10, "" 15, "" 20)
+#set label 5 "t = 4.08{/Symbol t}_{/Symbol a}" at 21,14
+#set xrange [0:31]
+#set yrange [0:14]
+set nokey
+#set arrow from 16.0,0 to 16.0,16 nohead lt 2 lw 1
+#set arrow from 1,0 to 1.0,16 nohead lt 2 lw 1
+#set key 3.8,10
+#set grid
+#set mytics 1
+#set ytics 10
+
+plot [0:20][0:120] "delay_a.dat" u 2:3 w l ls 1 title "DDE","noretard_a.dat" u 2:3 w l ls 3 title "ODE"
+
+#unset label 5
+unset multiplot
+

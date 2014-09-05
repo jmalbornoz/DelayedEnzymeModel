@@ -1,0 +1,60 @@
+#-------------------------------------------------------------------------------
+#set terminal postscript eps landscape enhanced "Arial" color 20
+set terminal postscript enhanced "Arial" 14
+set encoding iso_8859_1
+
+set output "fig4.eps"
+
+set style line 1 lt 1 lw 4
+set style line 2 lt 2 lw 4 
+set style line 3 lt 1 lw 1 
+set style line 4 lt 4 lw 4 
+set style line 5 lt 5 lw 4 
+set style line 6 lt 7 lw 4 
+set style line 7 lt 8 lw 4 
+set style line 8 lt 9 lw 4 
+set style line 9 lt 10 lw 4 
+
+set multiplot
+
+set size 0.92, 0.5
+set origin 0.05, 0.0
+set xlabel "t/{/Symbol t}" 
+#set y2label "Number of substrate molecules"
+set ytics 10
+set yrange [0:205]
+set y2range [1054:1364]
+set y2tics 0, 50.0
+set ytics nomirror
+unset ylabel
+set label 2 "(b)" at 0.5,200
+set nokey
+#set key spacing 1.5
+
+#plot [0:10][170:205] "discrete_tetra.dat" u 1:5 w l ls 1 title "Discrete","referencia_full.dat" u 2:3 w l ls 3 title "ODE"
+plot [0:10][170:205] "discrete_tetra.dat" u 1:5 w l ls 1 notitle,"referencia_full.dat" u 2:3 w l ls 3 notitle 
+unset xtics
+#set nokey
+unset xlabel
+unset label 2
+#unset ylabel
+#unset y2label
+
+set size 0.967, 0.45
+set origin 0.033,0.435
+set ylabel "[A], {/Symbol m}M" 0.2,-8
+set y2label "Number of substrate molecules" 1.005,-8
+set ytics 10
+set yrange [0:200]
+set y2range [1054:1364]
+set y2tics 0, 50.0
+set ytics nomirror
+set label 1 "(a)" at 0.5,200
+set key 2.1,180 
+
+plot [0:10][170:205] "delay_002.dat" u 2:3 w l ls 2 title "DDE","noretard.dat" u 2:3 w l ls 3 title "ODE","discrete.dat" u 1:5 w l ls 1 title "Discrete"
+
+unset ylabel
+unset label 1
+unset multiplot
+

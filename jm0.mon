@@ -1,0 +1,200 @@
+erase
+
+lw 2
+window 2 2 3
+LIMITS 0      0.120      0.000     72.344
+BOX
+
+relocate 7      78.92
+putlabel 4 ga=    83.33 gb=    83.33 \gt\\d\gap\\u= 0.018   
+relocate 7      78.92
+putlabel 6   \gt\\d\ga\\u=  0.02 \gt\\d\gbp\\u=  0.02 \gt\\d\gb\\u=  0.02
+ltype 0
+lw 1
+DATA ret3.res
+LINES    13  5000
+XCOLUMN  2
+YCOLUMN 11
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES  5001  9999
+XCOLUMN  2
+YCOLUMN 11
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES 10000 14998
+XCOLUMN  2
+YCOLUMN 11
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES 14999 17481
+XCOLUMN  2
+YCOLUMN 11
+CONNECT
+
+ylabel S
+xlabel t
+!.................
+lw 2
+window 2 2 4
+LIMITS 0      1.200      0.000      0.000
+BOX
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES    13  5000
+XCOLUMN  2
+YCOLUMN  5
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES  5001  9999
+XCOLUMN  2
+YCOLUMN  5
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES 10000 14998
+XCOLUMN  2
+YCOLUMN  5
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES 14999 17481
+XCOLUMN  2
+YCOLUMN  5
+CONNECT
+
+ltype 2
+lw 1
+DATA ret3.res
+LINES    13  5000
+XCOLUMN  2
+YCOLUMN  9
+CONNECT
+
+ltype 2
+lw 1
+DATA ret3.res
+LINES  5001  9999
+XCOLUMN  2
+YCOLUMN  9
+CONNECT
+
+ltype 2
+lw 1
+DATA ret3.res
+LINES 10000 14998
+XCOLUMN  2
+YCOLUMN  9
+CONNECT
+
+ltype 2
+lw 1
+DATA ret3.res
+LINES 14999 17481
+XCOLUMN  2
+YCOLUMN  9
+CONNECT
+
+ylabel n\\d\ga2\\u , n\\d\gb2\\u
+xlabel t
+!.................
+lw 2
+window 2 2 1
+LIMITS 0      0.000      0.000      0.000
+BOX
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES    13  5000
+XCOLUMN  5
+YCOLUMN  9
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES  5001  9999
+XCOLUMN  5
+YCOLUMN  9
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES 10000 14998
+XCOLUMN  5
+YCOLUMN  9
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES 14999 17481
+XCOLUMN  5
+YCOLUMN  9
+CONNECT
+
+xlabel n\\d\ga2\\u
+ylabel n\\d\gb2\\u
+!.................
+lw 2
+window 2 2 2
+LIMITS 0     78.347      0.000     26.118
+BOX
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES    13  5000
+XCOLUMN  3
+YCOLUMN  7
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES  5001  9999
+XCOLUMN  3
+YCOLUMN  7
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES 10000 14998
+XCOLUMN  3
+YCOLUMN  7
+CONNECT
+
+ltype 0
+lw 1
+DATA ret3.res
+LINES 14999 17481
+XCOLUMN  3
+YCOLUMN  7
+CONNECT
+
+ylabel B
+xlabel A
+!.................
+expand 1.0
+end

@@ -1,0 +1,81 @@
+#set terminal postscript eps landscape enhanced "Arial" color 20
+set terminal postscript eps enhanced "Arial" 10
+set output "multi_b.eps"
+#set title "c_{1} = 0.01, c_{2} = 0.99"
+#set key width -16 box
+#set key below
+set xtics 10
+#set mxtics 5
+set ytics 20
+#set mytics 5
+#set nokey
+#set xlabel "[A], {/Symbol m}M"  
+#set ylabel "[B], {/Symbol m}M" 
+#set y2label "Number of substrate molecules"
+#set yrange [0:200]
+#set y2range [0:1240]
+#set y2tics 0, 200.0
+#set ytics nomirror
+#set key 13,60 
+#set grid
+#set key spacing 1.5
+
+set style line 1 lt 1 lw 1
+set style line 2 lt 2 lw 1 
+set style line 3 lt 3 lw 1 
+set style line 4 lt 4 lw 1 
+set style line 5 lt 5 lw 4 
+set style line 6 lt 6 lw 4 
+set style line 6 lt 7 lw 4
+set style line 7 lt 8 lw 4 
+set style line 8 lt 9 lw 4 
+set style line 9 lt 10 lw 4 
+
+set multiplot layout 5,5 scale 1.1,1.1 
+
+plot [0:20][0:100] "delay_00.dat" u 2:3 w l ls 1 notitle,"delay_00.dat" u 2:7 w l ls 1 notitle 
+plot [0:20][0:100] "delay_01.dat" u 2:3 w l ls 1 notitle,"delay_01.dat" u 2:7 w l ls 1 notitle 
+plot [0:20][0:100] "delay_02.dat" u 2:3 w l ls 1 notitle,"delay_02.dat" u 2:7 w l ls 1 notitle 
+plot [0:20][0:100] "delay_03.dat" u 2:3 w l ls 1 notitle,"delay_03.dat" u 2:7 w l ls 1 notitle 
+plot [0:20][0:100] "delay_04.dat" u 2:3 w l ls 1 notitle,"delay_04.dat" u 2:7 w l ls 1 notitle 
+
+plot [0:20][0:100] "delay_10.dat" u 2:3 w l ls 1 notitle,"delay_10.dat" u 2:7 w l ls 1 notitle 
+plot [0:20][0:100] "delay_11.dat" u 2:3 w l ls 1 notitle,"delay_11.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_12.dat" u 2:3 w l ls 1 notitle,"delay_12.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_13.dat" u 2:3 w l ls 1 notitle,"delay_13.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_14.dat" u 2:3 w l ls 1 notitle,"delay_14.dat" u 2:7 w l ls 1 notitle
+
+plot [0:20][0:100] "delay_20.dat" u 2:3 w l ls 1 notitle,"delay_20.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_21.dat" u 2:3 w l ls 1 notitle,"delay_21.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_22.dat" u 2:3 w l ls 1 notitle,"delay_22.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_23.dat" u 2:3 w l ls 1 notitle,"delay_23.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_24.dat" u 2:3 w l ls 1 notitle,"delay_24.dat" u 2:7 w l ls 1 notitle
+
+plot [0:20][0:100] "delay_30.dat" u 2:3 w l ls 1 notitle,"delay_30.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_31.dat" u 2:3 w l ls 1 notitle,"delay_31.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_32.dat" u 2:3 w l ls 1 notitle,"delay_32.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_33.dat" u 2:3 w l ls 1 notitle,"delay_33.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_34.dat" u 2:3 w l ls 1 notitle,"delay_34.dat" u 2:7 w l ls 1 notitle
+
+plot [0:20][0:100] "delay_40.dat" u 2:3 w l ls 1 notitle,"delay_40.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_41.dat" u 2:3 w l ls 1 notitle,"delay_41.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_42.dat" u 2:3 w l ls 1 notitle,"delay_42.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_43.dat" u 2:3 w l ls 1 notitle,"delay_43.dat" u 2:7 w l ls 1 notitle
+plot [0:20][0:100] "delay_44.dat" u 2:3 w l ls 1 notitle,"delay_44.dat" u 2:7 w l ls 1 notitle
+
+unset multiplot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

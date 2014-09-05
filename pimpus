@@ -1,0 +1,38 @@
+set terminal eps monochrome
+set output "fig1.eps"
+
+set multiplot
+set width 4.86
+heigth=3
+width=4.86
+
+#******** grafico de abajo *********
+
+set origin 0*width, 0*heigth
+set xtics 2
+set xlabel '$t/\tau$'
+set ytics 10
+set y2range [1055:1272]
+set y2tics 0, 50.0
+set label 1 '(b)' 0.5,195
+#set label 1 'Number of substrate molecules' 10.5,12 rotate 90
+plot [0:10][150:209] "discrete_tetra.dat" u 1:5 notitle w l,"referencia_full.dat" u 2:3 notitle w l
+
+#******** grafico de arriba *********
+
+set origin 0*width, 1*heigth
+set xlabel ''
+set noxtics
+set ylabel ''
+set key bottom right 0.2,-0.4
+set ytics 10
+set y2range [1055:1272]
+set y2tics 0, 50.0
+set nolabel 1 
+set label 1 '(a)' 0.5,195
+set label 2 'Number of substrate molecules' 13., 105 rotate 90
+set label 3 '[A] ($\mu$M)' -2, 130 rotate 90
+plot [0:20][0:120] "delay_100.dat" u 2:3 w l title "DDE" w l,"noretard_100.dat" u 2:3 title "ODE" w l
+
+
+

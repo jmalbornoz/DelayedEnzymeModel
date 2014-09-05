@@ -1,0 +1,51 @@
+#set terminal postscript eps landscape enhanced "Arial" color 20
+set terminal postscript eps enhanced "Arial" 20
+set output "fig9a.eps"
+set title "c_{1} = 0.01, c_{2} = 0.99"
+#set key width -16 box
+#set key below
+#set xtics 10
+#set mxtics 5
+#set ytics 100
+#set mytics 5
+#set nokey
+set xlabel "t/{/Symbol t}" 
+set ylabel "[A], {/Symbol m}M" 
+#set y2label "Number of substrate molecules"
+#set yrange [0:200]
+#set y2range [0:1240]
+#set y2tics 0, 200.0
+#set ytics nomirror
+#set key 13,60 
+#set grid
+#set key spacing 1.5
+
+
+set style line 1 lt 1 lw 1
+set style line 2 lt 2 lw 1 
+set style line 3 lt 3 lw 1 
+set style line 4 lt 4 lw 1 
+set style line 5 lt 5 lw 4 
+set style line 6 lt 6 lw 4 
+set style line 6 lt 7 lw 4
+set style line 7 lt 8 lw 4 
+set style line 8 lt 9 lw 4 
+set style line 9 lt 10 lw 4 
+
+plot [0:40][0:100] "delay_9.dat" u 2:3 w l ls 1 title "A","delay_9.dat" u 2:7 w l ls 3 title "B"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
